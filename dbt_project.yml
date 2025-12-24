@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'jaffle_shop'
+name: 'jwpei_data_analyze'
 version: '1.0.0'
 config-version: 2
 
@@ -36,5 +36,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  jaffle_shop:
+  jwpei_data_analyze:
     +materialized: table
+
+seeds:
+  jwpei_data_analyze:
+    monitoring:
+      metric_thresholds:
+        +schema: dbt_evan     # 可选：单独 dataset
+        +column_types:
+          metric_name: string
+          start_month: string
+          end_month: string
+          min_value: numeric
+          max_value: numeric
+          monitor_type: string

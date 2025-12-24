@@ -1,0 +1,6 @@
+metric_name	start_month	end_month	min_value	max_value	monitor_type
+refund_b_sales_refund_create_usd	01 	09	21.91%	27.15%	1
+refund_b_sales_refund_create_usd	10	12	11.57%	12.84%	1
+refund_b_sales_refund_create_usd	01 	09	-	12.84%	2
+refund_b_sales_refund_create_usd	10	12	-	12.84%	2
+net_profit_total_create_usd	-	-	5%	-	3
