@@ -1,0 +1,8 @@
+models:
+  - name: fct_daily_metrics
+    tests:
+      - metric_threshold_check:
+          severity: warn
+          config:
+            store_failures: true
+            store_failures_as: table

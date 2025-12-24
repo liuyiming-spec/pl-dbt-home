@@ -43,7 +43,7 @@ seeds:
   jwpei_data_analyze:
     monitoring:
       metric_thresholds:
-        +schema: dbt_evan     # 可选：单独 dataset
+        # +schema: dbt_evan     # 可选：单独 dataset
         +column_types:
           metric_name: string
           start_month: string
