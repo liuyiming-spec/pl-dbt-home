@@ -43,11 +43,10 @@ seeds:
   jwpei_data_analyze:
     monitoring:
       metric_thresholds:
-        # +schema: dbt_evan     # 可选：单独 dataset
         +column_types:
-          metric_name: string
-          start_month: string
-          end_month: string
-          min_value: numeric
-          max_value: numeric
-          monitor_type: string
+          metric_name: STRING
+          start_month: INT64
+          end_month: INT64
+          min_value: NUMERIC
+          max_value: NUMERIC
+          monitor_type: INT64

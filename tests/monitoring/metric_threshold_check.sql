@@ -22,13 +22,14 @@ WITH base AS (
     a.metric_name,
     a.metric_value,
     a.base_value,
-    SAFE_DIVIDE(a.metric_value, a.base_value) AS ratio,   -- 公共：实际比率
+    SAFE_DIVIDE(a.metric_value, a.base_value) AS ratio,   -- 实际比率
     b.min_value,
     b.max_value
   FROM metric a
   JOIN threshold b
     ON a.metric_name = b.metric_name
-   AND a.monitor_type = b.monitor_type
+   AND a.monitor_type = b.monitor_type 
+   AND EXTRACT(MONTH FROM a.date) BETWEEN start_month AND end_month
 ),
 
 scored AS (
@@ -54,22 +55,25 @@ alarm AS (
     max_value,
     refund_status,
 
-    -- 报警类型（只把“命中的那一种”映射出来）
+    -- 报警类型
     CASE
-      WHEN monitor_type IN (1, 2) AND field_type = 'cost' AND ratio <= min_value THEN '核实'
+      WHEN monitor_type = 1 AND field_type = 'cost' AND ratio <= min_value THEN '核实'
       WHEN monitor_type IN (1, 2) AND field_type = 'cost' AND ratio >= max_value THEN '预警'
 
       WHEN monitor_type IN (1, 2) AND field_type = 'profit' AND ratio <= min_value THEN '预警'
-      WHEN monitor_type IN (1, 2) AND field_type = 'profit' AND ratio >= max_value THEN '核实'
+      WHEN monitor_type = 1 AND field_type = 'profit' AND ratio >= max_value THEN '核实'
 
       WHEN monitor_type = 3 AND field_type = 'profit' AND ratio <= min_value THEN '预警'
       ELSE NULL
     END AS alarm_type,
 
-    -- 预警值/核实值（跟 alarm_type 同步返回阈值）
+    -- 预警值/核实值
     CASE
-      WHEN monitor_type IN (1, 2) AND field_type IN ('cost','profit') AND ratio <= min_value THEN min_value
-      WHEN monitor_type IN (1, 2) AND field_type IN ('cost','profit') AND ratio >= max_value THEN max_value
+      WHEN monitor_type = 1 AND field_type = 'cost' AND ratio <= min_value THEN min_value
+      WHEN monitor_type IN (1, 2) AND field_type = 'cost' AND ratio >= max_value THEN max_value
+
+      WHEN monitor_type IN (1, 2) AND field_type = 'profit' AND ratio <= min_value THEN min_value
+      WHEN monitor_type = 1 AND field_type = 'profit' AND ratio >= max_value THEN max_value
 
       WHEN monitor_type = 3 AND field_type = 'profit' AND ratio <= min_value THEN min_value
       ELSE NULL
@@ -87,4 +91,3 @@ SELECT
   ROUND(ratio - alarm_value, 4) AS diff_value,  -- 差值
   CURRENT_DATE() AS alarm_date
 FROM alarm;
-
