@@ -48,6 +48,7 @@ seeds:
           start_month: INT64
           end_month: INT64
           min_value: NUMERIC
+          standard_value: NUMERIC
           max_value: NUMERIC
           monitor_type: INT64
       metric_cn_map:

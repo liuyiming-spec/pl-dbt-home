@@ -1,3 +1,4 @@
+-- 增量更新
 {{ 
   config(
     materialized = 'incremental',
@@ -43,6 +44,7 @@ base AS (
     a.base_value,
     SAFE_DIVIDE(a.metric_value, a.base_value) AS ratio,   -- 实际比率
     b.min_value,
+    b.standard_value,
     b.max_value
   FROM metric a
   JOIN threshold b
@@ -71,6 +73,7 @@ alarm AS (
     metric_name,
     ratio,
     min_value,
+    standard_value,
     max_value,
     refund_status,
 
@@ -105,8 +108,10 @@ SELECT
   b.metric_cn_name,
   a.alarm_type,
   a.alarm_value,
+  a.standard_value,
   ROUND(a.ratio, 4) AS actual_value,  --实际值
-  ROUND(a.ratio - a.alarm_value, 4) AS diff_value,  -- 差值
+  ROUND(a.ratio - a.standard_value, 4) AS standard_diff_value, 
+  ROUND(a.ratio - a.alarm_value, 4) AS alarm_diff_value,  
   CURRENT_DATE() AS alarm_date
 FROM alarm a 
 left join 
