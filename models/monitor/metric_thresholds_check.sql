@@ -86,7 +86,7 @@ SELECT
   metric_name,
   alarm_type,
   alarm_value,
-  ROUND(ratio, 2) AS actual_value,  --实际值
+  ROUND(ratio, 4) AS actual_value,  --实际值
   ROUND(ratio - alarm_value, 4) AS diff_value,  -- 差值
   CURRENT_DATE() AS alarm_date
 FROM alarm 
