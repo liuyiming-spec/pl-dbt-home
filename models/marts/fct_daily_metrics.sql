@@ -5,7 +5,7 @@ select
     "ALL" as country,
     "refund_b_total_create_usd" as metric_name,
     sum(refund_b_total_create_usd) as metric_value,
-    sum(net_profit_total_create_usd) as base_value,
+    sum(net_income_total_create_usd) as base_value,
     "cost" as field_type,
     1 as monitor_type
 from 
@@ -23,7 +23,7 @@ select
     "ALL" as country,
     "ads_total_usd" as metric_name,
     sum(ads_total_usd) as metric_value,
-    sum(net_profit_total_create_usd) as base_value,
+    sum(net_income_total_create_usd) as base_value,
     "cost" as field_type,
     1 as monitor_type 
 from 
@@ -61,7 +61,7 @@ select
     "ALL" as country,
     "refund_b_total_create_usd" as metric_name,
     sum(refund_b_total_create_usd) as metric_value,
-    sum(net_profit_total_create_usd) as base_value,
+    sum(net_income_total_create_usd) as base_value,
     "cost" as field_type,
     2 as monitor_type 
 from 
@@ -79,7 +79,7 @@ select
     "ALL" as country,
     "ads_total_usd" as metric_name,
     sum(ads_total_usd) as metric_value,
-    sum(net_profit_total_create_usd) as base_value,
+    sum(net_income_total_create_usd) as base_value,
     "cost" as field_type,
     2 as monitor_type 
 from 

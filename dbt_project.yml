@@ -42,7 +42,7 @@ models:
 seeds:
   jwpei_data_analyze:
     monitoring:
-      metric_thresholds:
+      metric_thresholds_config:
         +column_types:
           metric_name: STRING
           start_month: INT64
