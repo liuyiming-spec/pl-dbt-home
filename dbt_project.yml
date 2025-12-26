@@ -50,3 +50,7 @@ seeds:
           min_value: NUMERIC
           max_value: NUMERIC
           monitor_type: INT64
+      metric_cn_map:
+        +column_types:
+          metric_name: STRING
+          metric_cn_name: STRING
