@@ -1,0 +1,8 @@
+sources:
+    - name: sales
+      description: This is a replica of the BigQuery database sales data
+      database: pl-brands-group-3180
+      schema: dbt_evan
+      tables:
+          - name: ads_amazon_profit_model_tableau
+            description: Aamazon profit data

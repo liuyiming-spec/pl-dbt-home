@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'jwpei_data_analyze'
 version: '1.0.0'
 config-version: 2
 
@@ -36,7 +36,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
+  jwpei_data_analyze:
+    +materialized: table
+
+seeds:
+  jwpei_data_analyze:
+    monitoring:
+      metric_thresholds_config:
+        +column_types:
+          metric_name: STRING
+          start_month: INT64
+          end_month: INT64
+          min_value: NUMERIC
+          max_value: NUMERIC
+          monitor_type: INT64
