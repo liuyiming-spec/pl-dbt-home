@@ -1,3 +1,12 @@
+{{ 
+  config(
+    materialized = 'incremental',
+    unique_key = ['alarm_date', 'metric_name'],
+    incremental_strategy = 'merge'
+  ) 
+}}
+
+
 -- 指标
 with metric as (
   select 
@@ -13,6 +22,15 @@ threshold as (
   from 
     {{ ref('metric_thresholds_config') }}
 ),
+
+-- 字段映射
+map as (
+  select 
+    *
+  from 
+    {{ ref('metric_cn_map') }}
+),
+
 
 -- 规则
 base AS (
@@ -81,14 +99,19 @@ alarm AS (
 )
 
 SELECT
-  date,
-  refund_status,
-  metric_name,
-  alarm_type,
-  alarm_value,
-  ROUND(ratio, 4) AS actual_value,  --实际值
-  ROUND(ratio - alarm_value, 4) AS diff_value,  -- 差值
+  a.date,
+  a.refund_status,
+  a.metric_name,
+  b.metric_cn_name,
+  a.alarm_type,
+  a.alarm_value,
+  ROUND(a.ratio, 4) AS actual_value,  --实际值
+  ROUND(a.ratio - a.alarm_value, 4) AS diff_value,  -- 差值
   CURRENT_DATE() AS alarm_date
-FROM alarm 
+FROM alarm a 
+left join 
+    map b 
+on 
+    a.metric_name = b.metric_name 
 where alarm_type is not null
     

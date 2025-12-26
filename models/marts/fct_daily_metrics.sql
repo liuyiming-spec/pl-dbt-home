@@ -67,7 +67,7 @@ select
 from 
     {{source("sales","ads_amazon_profit_model_tableau")}} 
 where 
-    `date` > DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+    `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY)
 group by 
     1 
 
@@ -85,7 +85,7 @@ select
 from 
     {{source("sales","ads_amazon_profit_model_tableau")}} 
 where 
-    `date` > DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+    `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY)
 group by 
     1 
 
@@ -104,7 +104,7 @@ select
 from 
     {{source("sales","ads_amazon_profit_model_tableau")}} 
 where 
-    `date` > DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+    `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY)
 group by 
     1 
 
@@ -123,6 +123,6 @@ select
 from 
     {{source("sales","ads_amazon_profit_model_tableau")}} 
 where 
-    `date` >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY) 
+    `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and DATE_SUB(CURRENT_DATE(), INTERVAL 1 DAY)
 group by 
     1,2
