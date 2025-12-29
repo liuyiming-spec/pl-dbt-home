@@ -58,8 +58,8 @@ scored AS (
     *,
     -- 退款状态
     CASE
-      WHEN monitor_type IN (1, 3) THEN '退款周期未完成'
-      WHEN monitor_type = 2 THEN '退款周期已完成'
+      WHEN monitor_type IN (1, 3) THEN '退款周期已完成'
+      WHEN monitor_type = 2 THEN '退款周期未完成'
       ELSE NULL
     END AS refund_status 
   FROM base
