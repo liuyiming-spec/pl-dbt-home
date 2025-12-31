@@ -1,5 +1,5 @@
 -------------------------------过去第三十天 成本-------------------------------
--- 扣点(佣金)
+-- 扣点
 select 
     `date`,
     "ALL" as country,
@@ -180,22 +180,22 @@ group by
 union all 
 
 -- 运费-尾程
--- select 
---     `date`,
---     "ALL" as country,
---     "" as metric_name,
---     sum() as metric_value,
---     sum(net_income_total_create_usd) as base_value,
---     "cost" as field_type,
---     1 as monitor_type
--- from 
---     {{source("sales","ads_amazon_profit_model_tableau")}} 
--- where 
---     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
--- group by 
---     1 
+select 
+    `date`,
+    "ALL" as country,
+    "freight_fba_fees_create_usd" as metric_name,
+    sum(freight_fba_fees_create_usd) as metric_value,
+    sum(net_income_total_create_usd) as base_value,
+    "cost" as field_type,
+    1 as monitor_type
+from 
+    {{source("sales","ads_amazon_profit_model_tableau")}} 
+where 
+    `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+group by 
+    1 
 
--- union all 
+union all 
 
 -- 运费-月度仓储
 select 
@@ -252,22 +252,22 @@ group by
 union all 
 
 -- 仓库
--- select 
---     `date`,
---     "ALL" as country,
---     "" as metric_name,
---     sum() as metric_value,
---     sum(net_income_total_create_usd) as base_value,
---     "cost" as field_type,
---     1 as monitor_type
--- from 
---     {{source("sales","ads_amazon_profit_model_tableau")}} 
--- where 
---     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
--- group by 
---     1 
+select 
+    `date`,
+    "ALL" as country,
+    "operating_jt_total_usd" as metric_name,
+    sum(operating_jt_total_usd) as metric_value,
+    sum(net_income_total_create_usd) as base_value,
+    "cost" as field_type,
+    1 as monitor_type
+from 
+    {{source("sales","ads_amazon_profit_model_tableau")}} 
+where 
+    `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+group by 
+    1 
 
--- union all 
+union all 
 
 -- 运营人员
 select 
@@ -379,7 +379,7 @@ group by
 union all
 
 -------------------------------过去三十天内 成本-------------------------------
--- 扣点(佣金)
+-- 扣点
 select 
     `date`,
     "ALL" as country,
@@ -560,22 +560,22 @@ group by
 union all 
 
 -- 运费-尾程
--- select 
---     `date`,
---     "ALL" as country,
---     "" as metric_name,
---     sum() as metric_value,
---     sum(net_income_total_create_usd) as base_value,
---     "cost" as field_type,
---     1 as monitor_type
--- from 
---     {{source("sales","ads_amazon_profit_model_tableau")}} 
--- where 
---     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
--- group by 
---     1 
+select 
+    `date`,
+    "ALL" as country,
+    "freight_fba_fees_create_usd" as metric_name,
+    sum(freight_fba_fees_create_usd) as metric_value,
+    sum(net_income_total_create_usd) as base_value,
+    "cost" as field_type,
+    1 as monitor_type
+from 
+    {{source("sales","ads_amazon_profit_model_tableau")}} 
+where 
+    `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+group by 
+    1 
 
--- union all 
+union all 
 
 -- 运费-月度仓储
 select 
@@ -632,22 +632,22 @@ group by
 union all 
 
 -- 仓库
--- select 
---     `date`,
---     "ALL" as country,
---     "freight_other_fba_storage_usd" as metric_name,
---     sum(freight_other_fba_storage_usd) as metric_value,
---     sum(net_income_total_create_usd) as base_value,
---     "cost" as field_type,
---     1 as monitor_type
--- from 
---     {{source("sales","ads_amazon_profit_model_tableau")}} 
--- where 
---     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
--- group by 
---     1 
+select 
+    `date`,
+    "ALL" as country,
+    "freight_other_fba_storage_usd" as metric_name,
+    sum(freight_other_fba_storage_usd) as metric_value,
+    sum(net_income_total_create_usd) as base_value,
+    "cost" as field_type,
+    1 as monitor_type
+from 
+    {{source("sales","ads_amazon_profit_model_tableau")}} 
+where 
+    `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+group by 
+    1 
 
--- union all 
+union all 
 
 -- 运营人员
 select 
