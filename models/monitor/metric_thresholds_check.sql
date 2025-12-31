@@ -37,6 +37,7 @@ map as (
 base AS (
   SELECT
     a.date,
+    a.country,
     a.monitor_type,
     a.field_type,
     a.metric_name,
@@ -68,6 +69,7 @@ scored AS (
 alarm AS (
   SELECT
     date,
+    country,
     monitor_type,
     field_type,
     metric_name,
@@ -103,6 +105,7 @@ alarm AS (
 
 SELECT
   a.date,
+  a.country,
   a.monitor_type,
   a.refund_status,
   a.metric_name,
