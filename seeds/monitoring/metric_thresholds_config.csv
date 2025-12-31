@@ -1,14 +1,78 @@
 metric_name,start_month,end_month,min_value,standard_value,max_value,monitor_type
-refund_b_sales_refund_create_usd,1,9,0.2191,0.2440 ,0.2715,1
-refund_b_sales_refund_create_usd,10,12,0.2191,0.2440 ,0.2715,1
+commission_total_create_usd,1,9,0.1020 ,0.1087,0.1176,1
+commission_total_create_usd,10,12,0.1020 ,0.1087,0.1176,1
+commission_total_create_usd,1,9,,,0.1176,2
+commission_total_create_usd,10,12,,,0.1176,2
+refund_b_sales_refund_create_usd,1,9,0.2191,0.244,0.2715,1
+refund_b_sales_refund_create_usd,10,12,0.2191,0.244,0.2715,1
 refund_b_sales_refund_create_usd,1,9,,,0.2715,2
 refund_b_sales_refund_create_usd,10,12,,,0.2715,2
-net_profit_total_create_usd,,,0.05,,,3
-net_profit_total_create_usd,1,9,0.16,0.1958,0.22,1
-net_profit_total_create_usd,10,12,0.1510 ,0.1872 ,0.2110 ,1
-net_profit_total_create_usd,1,9,0.1600 ,,,2
-net_profit_total_create_usd,10,12,0.1510 ,,,2
-ads_total_usd,1,9,0.125,0.1457,0.1606,1
-ads_total_usd,10,12,0.125,1.1457,0.1606,1
+cost_total_create_usd,1,9,0.1157,0.1229,0.1284,1
+cost_total_create_usd,10,12,0.1157,0.1229,0.1284,1
+cost_total_create_usd,1,9,,,0.1284,2
+cost_total_create_usd,10,12,,,0.1284,2
+ads_total_usd,1,9,0.1250 ,0.1457,0.1606,1
+ads_total_usd,10,12,0.1250 ,1.1457,0.1606,1
 ads_total_usd,1,9,,,0.1606,2
 ads_total_usd,10,12,,,0.1606,2
+ads_cpc_cost_usd,1,9,0.1250 ,0.1394,0.1600 ,1
+ads_cpc_cost_usd,10,12,0.1250 ,0.1394,0.1600 ,1
+ads_cpc_cost_usd,1,9,,,0.1600 ,2
+ads_cpc_cost_usd,10,12,,,0.1600 ,2
+ads_deal_fee_usd,1,9,0,0.0067,0.0083,1
+ads_deal_fee_usd,10,12,0,0.0067,0.0083,1
+ads_deal_fee_usd,1,9,,,0.0083,2
+ads_deal_fee_usd,10,12,,,0.0083,2
+amz_channel_promote_coupon_usd,1,9,0,0,0.0001,1
+amz_channel_promote_coupon_usd,10,12,0,0,0.0001,1
+amz_channel_promote_coupon_usd,1,9,,,0.0001,2
+amz_channel_promote_coupon_usd,10,12,,,0.0001,2
+amz_vine_fee_usd,1,9,0,0.0003,0.0004,1
+amz_vine_fee_usd,10,12,0,0.0003,0.0004,1
+amz_vine_fee_usd,1,9,,,0.0004,2
+amz_vine_fee_usd,10,12,,,0.0004,2
+freight_total_create_usd,1,9,0.0913,0.1046,0.1197,1
+freight_total_create_usd,10,12,0.1003,0.1132,0.1287,1
+freight_total_create_usd,1,9,,,0.1197,2
+freight_total_create_usd,10,12,,,0.1287,2
+freight_headway_fee_create_usd,1,9,0.0337,0.0394,0.0478,1
+freight_headway_fee_create_usd,10,12,0.0337,0.0394,0.0478,1
+freight_headway_fee_create_usd,1,9,,,0.0478,2
+freight_headway_fee_create_usd,10,12,,,0.0478,2
+freight_inventory_fee_usd,1,9,0.004,0.0055,0.0065,1
+freight_inventory_fee_usd,10,12,0.013,0.0141,0.0155,1
+freight_inventory_fee_usd,1,9,,,0.0065,2
+freight_inventory_fee_usd,10,12,,,0.0155,2
+freight_long_term_storage_fee_usd,1,9,0.0015,0.0030 ,0.0035,1
+freight_long_term_storage_fee_usd,10,12,0.0015,0.0030 ,0.0035,1
+freight_long_term_storage_fee_usd,1,9,,,0.0035,2
+freight_long_term_storage_fee_usd,10,12,,,0.0035,2
+freight_other_fba_storage_usd,1,9,0.0001,0.0003,0.005,1
+freight_other_fba_storage_usd,10,12,0.0001,0.0003,0.005,1
+freight_other_fba_storage_usd,1,9,,,0.005,2
+freight_other_fba_storage_usd,10,12,,,0.005,2
+operation_staff_total_usd,1,9,0.0103,0.0120 ,0.0140 ,1
+operation_staff_total_usd,10,12,0.0103,0.0120 ,0.0140 ,1
+operation_staff_total_usd,1,9,,,0.0140 ,2
+operation_staff_total_usd,10,12,,,0.0140 ,2
+support_staff_total_usd,1,9,0.0059,0.0075,0.0097,1
+support_staff_total_usd,10,12,0.0059,0.0075,0.0097,1
+support_staff_total_usd,1,9,,,0.0097,2
+support_staff_total_usd,10,12,,,0.0097,2
+dev_cost_total_usd,1,9,0,0,0,1
+dev_cost_total_usd,10,12,0,0,0,1
+dev_cost_total_usd,1,9,,,0,2
+dev_cost_total_usd,10,12,,,0,2
+other_fee_total_usd,1,9,0,0,0,1
+other_fee_total_usd,10,12,0,0,0,1
+other_fee_total_usd,1,9,,,0,2
+other_fee_total_usd,10,12,,,0,2
+tax_c_total_create_usd,1,9,0.0338,0.0387,0.0433,1
+tax_c_total_create_usd,10,12,0.0338,0.0387,0.0433,1
+tax_c_total_create_usd,1,9,,,0.0433,2
+tax_c_total_create_usd,10,12,,,0.0433,2
+net_profit_total_create_usd,1,9,0.16,0.1958,0.22,1
+net_profit_total_create_usd,10,12,0.151,0.1872,0.211,1
+net_profit_total_create_usd,1,9,0.16,,,2
+net_profit_total_create_usd,10,12,0.151,,,2
+net_profit_total_create_usd,,,0.05,,,3
