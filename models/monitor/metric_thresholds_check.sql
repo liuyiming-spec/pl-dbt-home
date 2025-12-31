@@ -103,6 +103,7 @@ alarm AS (
 
 SELECT
   a.date,
+  a.monitor_type,
   a.refund_status,
   a.metric_name,
   b.metric_cn_name,
