@@ -9,7 +9,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -27,7 +27,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -45,7 +45,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -63,7 +63,7 @@ select
     "cost" as field_type,
     1 as monitor_type 
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -81,7 +81,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -99,7 +99,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -117,7 +117,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -135,7 +135,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -153,7 +153,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -171,7 +171,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -189,7 +189,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -207,7 +207,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -225,7 +225,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -243,7 +243,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -261,7 +261,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -279,7 +279,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -297,7 +297,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -315,7 +315,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -333,7 +333,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -351,7 +351,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -370,7 +370,7 @@ select
     "profit" as field_type,
     1 as monitor_type 
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -389,7 +389,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -407,7 +407,7 @@ select
     "cost" as field_type,
     2 as monitor_type 
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -425,7 +425,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -443,7 +443,7 @@ select
     "cost" as field_type,
     2 as monitor_type  
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -461,7 +461,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -479,7 +479,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -497,7 +497,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -515,7 +515,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -533,7 +533,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -551,7 +551,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
    `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -569,7 +569,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -587,7 +587,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -605,7 +605,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -623,7 +623,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -641,7 +641,7 @@ select
     "cost" as field_type,
     1 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` = DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
 group by 
@@ -659,7 +659,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -677,7 +677,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -695,7 +695,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -713,7 +713,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -731,7 +731,7 @@ select
     "cost" as field_type,
     2 as monitor_type
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -750,7 +750,7 @@ select
     "profit" as field_type,
     2 as monitor_type 
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
@@ -769,7 +769,7 @@ select
     "profit" as field_type,
     3 as monitor_type  
 from 
-    {{source("sales","ads_amazon_profit_model_tableau")}} 
+    {{source("sales","amazon_profit")}} 
 where 
     `date` between DATE_SUB(CURRENT_DATE(), INTERVAL 29 DAY) and CURRENT_DATE()
 group by 
