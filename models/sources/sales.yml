@@ -31,7 +31,7 @@ sources:
                 period: hour
             loaded_at_field: ingested_at
         
-        - name: ads_amazon_profit_model_tableau
+        - name: amazon_profit
           identifier: ads_amazon_profit_model_tableau
           description: 亚马逊利润模型
           config: 
