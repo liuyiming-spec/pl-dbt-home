@@ -1,8 +1,45 @@
 sources:
-    - name: sales
-      description: This is a replica of the BigQuery database sales data
+    - name: sales_amazon
+      description: 亚马逊销售数据
       database: pl-brands-group-3180
-      schema: dbt_evan
-      tables:
-          - name: ads_amazon_profit_model_tableau
-            description: Aamazon profit data
+      schema: Amazon
+      tags: ['domain:sales']
+      tables: 
+        - name: amazon_business_report
+          identifier: dws_amazon_business_report_by_childasin_pipeline_tableau
+          description: 亚马逊流量表
+          config: 
+            freshness:
+              warn_after:
+                count: 24
+                period: hour
+              error_after:
+                count: 36
+                period: hour
+            loaded_at_field: ingested_at
+
+        - name: amazon_order
+          identifier: dwd_amazon_all_order_pipeline
+          description: 亚马逊订单表
+          config: 
+            freshness:
+              warn_after:
+                count: 2
+                period: hour
+              error_after:
+                count: 4
+                period: hour
+            loaded_at_field: ingested_at
+        
+        - name: amazon_profit
+          identifier: ads_amazon_profit_model_tableau
+          description: 亚马逊利润模型
+          config: 
+            freshness:
+              warn_after:
+                count: 24
+                period: hour
+              error_after:
+                count: 36
+                period: hour
+            loaded_at_field: ingested_at

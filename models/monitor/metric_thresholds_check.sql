@@ -118,7 +118,7 @@ SELECT
   ROUND(a.ratio - a.alarm_value, 4) AS alarm_diff_value,  
   CURRENT_DATE() AS alarm_date
 FROM alarm a 
-left join 
+left join
     map b 
 on 
     a.metric_name = b.metric_name 
